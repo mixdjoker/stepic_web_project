@@ -6,7 +6,7 @@ def app(environ, start_response):
     body = []
     for qs_key, qs_val in query.items():
         for qs_item in qs_val:
-            body.append("%s=%s\r\n" % (qk_key, qs_item))
+            body.append("%s=%s\r\n" % (qs_key, qs_item))
 
     status = '200 OK'
     headers = [('Content-type', 'text/plain')]
