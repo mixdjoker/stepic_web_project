@@ -9,8 +9,8 @@ def app(environ, start_response):
             body.append(key + "=" + item + "\r\n")
 
     status = '200 OK'
-    headers = [('Content-Type', 'text/plain')]
+    headers = [('Content-type', 'text/plain')]
 
     start_response(status, headers)
-    return body
+    return [body]
 
